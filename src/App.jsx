@@ -12,14 +12,18 @@ import Camera from './components/camera';
 function App() {
   const gui = new GUI();
 
+  const homeOfficeFolder = gui.addFolder('Home Office');
+  const lightFolder = gui.addFolder('Light');
+  const cameraFolder = gui.addFolder('Camera');
+
   return (
     <>
       <div className="App">
         <Canvas>
           <Suspense fallback={null}>
-            <Camera gui={gui} />
-            <Light gui={gui} />
-            <ModelHomeOffice gui={gui} />
+            <Camera guiFolder={cameraFolder} />
+            <Light guiFolder={lightFolder} />
+            <ModelHomeOffice guiFolder={homeOfficeFolder} />
             <axesHelper args={[5]} />
             <Stats />
             <OrbitControls />
