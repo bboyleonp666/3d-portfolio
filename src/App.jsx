@@ -1,20 +1,23 @@
 import './App.css';
 
-import { Suspense, useRef, useEffect } from 'react';
+import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, PerspectiveCamera, Stats } from "@react-three/drei";
+import { OrbitControls, Stats } from "@react-three/drei";
+import { GUI } from 'lil-gui';
 
-import Model from './models/home_basement';
+import Model from './models/home_office';
 import Camera from './components/camera';
 
 function App() {
+  const gui = new GUI();
+
   return (
     <>
       <div className="App">
         <Canvas>
           <Suspense fallback={null}>
-            <Camera />
-            <Model />
+            <Camera gui={gui} />
+            <Model gui={gui} />
             <axesHelper args={[5]} />
             <Stats />
             <OrbitControls />

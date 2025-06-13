@@ -1,7 +1,9 @@
-- [ ] add model
+- [x] add model
+    - [ ] adjust texture
 - [ ] add character
     - [ ] add character controller (W, S, A, D, <space>, <enter>, ...)
     - [ ] add api integration
+    - [ ] adjust furniture layout to fit the character (maybe)
 - [ ] setup environment
     - [ ] add some light
 - [ ] create fundamental web page
