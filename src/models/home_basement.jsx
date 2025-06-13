@@ -8,8 +8,9 @@ import { useGLTF } from '@react-three/drei'
 export default function Model(props) {
   const groupRef = useRef()
   const { nodes, materials } = useGLTF('/home_office/scene.gltf')
-  console.log('nodes: ', nodes);
-  console.log('materials: ', materials);
+  // TODO: remove after debugging
+  // console.log('nodes: ', nodes);
+  // console.log('materials: ', materials);
   const objectMeshes = Object.keys(nodes)
     .filter((key) => key.startsWith('Object_'))
     .map((key) => (
@@ -24,14 +25,6 @@ export default function Model(props) {
   
   return (
     <group ref={groupRef} {...props} dispose={null}>
-      {/*
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_2.geometry}
-          material={materials['Material.003']}
-        />
-      */}
       {objectMeshes}
     </group>
   )

@@ -17,6 +17,7 @@ function App() {
           <Suspense fallback={null}>
             <PerspectiveCamera makeDefault position={[0, 0, 5]} />
             <Model />
+            <axesHelper args={[5]} />
             <OrbitControls />
           </Suspense>
         </Canvas>
