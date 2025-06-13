@@ -7,10 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ gui, ...props }) {
   const groupRef = useRef()
-  const { nodes, materials } = useGLTF('/home_office/scene.gltf')
-  // TODO: remove after debugging
-  // console.log('nodes: ', nodes);
-  // console.log('materials: ', materials);
+  const { nodes, materials } = useGLTF('/home_office_v2/scene.gltf')
   const objectMeshes = Object.keys(nodes)
     .filter((key) => key.startsWith('Object_'))
     .map((key) => (
