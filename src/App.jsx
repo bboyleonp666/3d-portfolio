@@ -1,10 +1,11 @@
 import './App.css';
 
-import { Suspense } from 'react';
+import { Suspense, useRef, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera, Stats } from "@react-three/drei";
 
 import Model from './models/home_basement';
+import Camera from './components/camera';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <div className="App">
         <Canvas>
           <Suspense fallback={null}>
-            <PerspectiveCamera makeDefault position={[0, 0, 5]} />
+            <Camera />
             <Model />
             <axesHelper args={[5]} />
             <Stats />
