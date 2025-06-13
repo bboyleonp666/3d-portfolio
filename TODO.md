@@ -1,0 +1,9 @@
+- [ ] add model
+- [ ] add character
+    - [ ] add character controller (W, S, A, D, <space>, <enter>, ...)
+    - [ ] add api integration
+- [ ] create fundamental web page
+    - [ ] Home
+    - [ ] About
+    - [ ] Blog
+    - [ ] Contact
