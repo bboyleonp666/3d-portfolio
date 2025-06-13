@@ -2,6 +2,8 @@
 - [ ] add character
     - [ ] add character controller (W, S, A, D, <space>, <enter>, ...)
     - [ ] add api integration
+- [ ] setup environment
+    - [ ] add some light
 - [ ] create fundamental web page
     - [ ] Home
     - [ ] About
