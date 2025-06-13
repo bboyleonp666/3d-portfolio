@@ -6,7 +6,7 @@ import { OrbitControls, Stats } from "@react-three/drei";
 import { GUI } from 'lil-gui';
 import Light from './components/Light';
 
-import Model from './models/home_office';
+import ModelHomeOffice from './models/HomeOffice';
 import Camera from './components/camera';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Suspense fallback={null}>
             <Camera gui={gui} />
             <Light gui={gui} />
-            <Model gui={gui} />
+            <ModelHomeOffice gui={gui} />
             <axesHelper args={[5]} />
             <Stats />
             <OrbitControls />
