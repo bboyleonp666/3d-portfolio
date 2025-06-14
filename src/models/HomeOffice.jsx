@@ -10,7 +10,7 @@ export default function ModelHomeOffice({ guiFolder, ...props }) {
   useEffect(() => {
     if (ref.current) {
       ref.current.rotation.x = 0.5 * Math.PI;
-      ref.current.rotation.y = 0.05 * Math.PI;
+      ref.current.rotation.y = -0.25 * Math.PI;
     }
 
     guiFolder.add(ref.current.position, 'x', -50, 50, 1).name('Model X Position');
